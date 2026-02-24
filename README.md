@@ -1,75 +1,94 @@
 # Fleet Management System
 
-## Pages & Features
+Vehicle fleet tracking, maintenance, and route optimization.
 
-### 1. Dashboard
-- Total vehicles, active / inactive / in-maintenance count
-- Live map with vehicle locations
-- Fuel cost trends chart
-- Upcoming maintenance alerts
-- Driver availability overview
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
 
-### 2. Vehicles
-- Vehicle registry with search & filters (type, status, location)
-- Vehicle detail: make, model, year, VIN, license plate, photos
-- Vehicle status (active, parked, in-maintenance, retired)
-- Document management (registration, insurance, inspection)
-- Assignment history
+## Tech Stack
 
-### 3. Drivers
-- Driver directory with license, status, assigned vehicle
-- Driver profile: contact info, certifications, driving record
-- License & certification expiry alerts
-- Driver performance score
-- Hours of service tracking
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
 
-### 4. Live Tracking
-- Real-time map with all vehicles
-- Vehicle speed, heading, and status indicators
-- Route replay (historical path)
-- Geofence setup & alerts (enter / exit zones)
-- Idle time detection
+## Getting Started
 
-### 5. Trips & Routes
-- Trip log (start, end, distance, duration, driver, vehicle)
-- Route planning & optimization
-- Trip detail with route on map
-- Mileage tracking
-- Trip expense logging
+```bash
+npm install
+cp .env.example .env.local
+# Set VITE_CONVEX_URL to your deployment URL
+npm run dev
+```
 
-### 6. Fuel Management
-- Fuel entry logging (date, amount, cost, odometer)
-- Fuel consumption per vehicle (MPG / L/100km)
-- Fuel cost analysis over time
-- Fuel card integration support
-- Anomaly / theft alerts
+## License
 
-### 7. Maintenance
-- Scheduled maintenance calendar
-- Maintenance request creation
-- Service history per vehicle
-- Preventive maintenance rules (by mileage / time)
-- Vendor / workshop management
-- Cost tracking per maintenance event
+MIT © Mehdi Nabhani
 
-### 8. Alerts & Notifications
-- Speeding alerts
-- Maintenance due reminders
-- License / insurance expiry warnings
-- Geofence violation alerts
-- Configurable alert rules
+---
 
-### 9. Reports
-- Fleet utilization rate
-- Total cost of ownership per vehicle
-- Driver performance comparison
-- Fuel efficiency trends
-- Maintenance cost analysis
-- Export as PDF / CSV
+<details>
+<summary>📋 Original Feature Spec</summary>
 
-### 10. Settings
-- Company profile
-- Vehicle categories & types
-- Alert thresholds
-- Geofence management
-- User roles & permissions
+# {{APP_TITLE}}
+
+{{APP_DESCRIPTION}}
+
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
+
+## Tech Stack
+
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 22+
+- A running [shared Convex backend](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+
+### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Create .env.local with your Convex URL
+cp .env.example .env.local
+# Edit .env.local and set VITE_CONVEX_URL to your deployment URL
+
+# Start the dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run typecheck` | Run TypeScript type checking |
+
+## Project Structure
+
+```
+src/
+  main.tsx              # Entry point with ConvexAuthProvider
+  App.tsx               # Auth routing (Landing vs Dashboard)
+  App.css               # Component styles
+  index.css             # Global styles & design tokens
+  components/
+    Landing.tsx          # Marketing/landing page
+    SignIn.tsx           # Auth form (sign-in/sign-up)
+    Dashboard.tsx        # Authenticated app shell
+api.ts                   # Convex API types (from shared backend)
+```
+
+## License
+
+MIT © Mehdi Nabhani
+
+</details>
